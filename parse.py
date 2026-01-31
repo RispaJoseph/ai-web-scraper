@@ -3,17 +3,17 @@ from langchain_core.prompts import ChatPromptTemplate
 
 
 template = (
-    "You are tasked with extracting specific information from the following text content.\n\n"
-    "CONTENT:\n{dom_content}\n\n"
-    "INSTRUCTIONS:\n"
-    "1. Extract ONLY information matching: {parse_description}\n"
-    "2. Do not add explanations or comments.\n"
-    "3. If nothing matches, return an empty string.\n"
-    "4. Return only clean extracted data.\n"
+    "You are tasked with extracting specific information from the following text content: {dom_content}. "
+    "Please follow these instructions carefully: \n\n"
+    "1. **Extract Information:** Only extract the information that directly matches the provided description: {parse_description}. "
+    "2. **No Extra Content:** Do not include any additional text, comments, or explanations in your response. "
+    "3. **Empty Response:** If no information matches the description, return an empty string ('')."
+    "4. **Direct Data Only:** Your output should contain only the data that is explicitly requested, with no other text."
 )
 
 
 model = OllamaLLM(model="llama3.1:latest")
+
 
 
 def parse_with_ollama(dom_chunks, parse_description):
