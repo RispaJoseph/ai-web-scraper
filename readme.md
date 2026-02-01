@@ -19,13 +19,13 @@ This tool allows users to scrape any webpage, clean the content, and extract mea
 
 ## ⚙️ Tech Stack
 
-**Python**
-**Streamlit** — UI
-**Selenium** — browser automation & scraping
-**BeautifulSoup** — HTML parsing & cleaning
-**LangChain** — prompt pipeline
-**Ollama**  — local LLM inference
-**Chrome WebDriver** — browser driver
+- **Python**
+- **Streamlit** — UI
+- **Selenium** — browser automation & scraping
+- **BeautifulSoup** — HTML parsing & cleaning
+- **LangChain** — prompt pipeline
+- **Ollama**  — local LLM inference
+- **Chrome WebDriver** — browser driver
 
 
 ## 📂 Project Structure
@@ -38,5 +38,45 @@ ai-web-scraper/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
+
+## ⚙️ Installation
+
+Clone repo
+
+```
+git clone https://github.com/yourusername/ai-web-scraper.git
+cd ai-web-scraper
+```
+
+Create virtual environment
+
+```
+python -m venv venv
+source venv/bin/activate
+```
+
+Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+Enable AI Parsing
+```
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+Pull lightweight model
+
+```
+ollama pull tinyllama
+```
+
+
+Run the App
+
+```
+streamlit run main.py
 ```
 
