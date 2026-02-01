@@ -10,8 +10,9 @@ if st.button("Scrape Site"):
     st.write("Scraping the website")
     
     result = scrape_website(url)
-    body_content = clean_body_content(result)
+    body_content = extract_body_content(result)
     cleaned_content = clean_body_content(body_content)
+
     
     st.session_state.dom_content = cleaned_content
     
@@ -28,5 +29,6 @@ if "dom_content" in st.session_state:
             
             dom_chunks = split_dom_content(st.session_state.dom_content)
             result = parse_with_ollama(dom_chunks, parse_description)
-            st.write(result)
+            st.text_area("Parsed Result", result, height=300)
+
     

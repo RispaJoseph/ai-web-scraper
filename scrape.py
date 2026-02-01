@@ -6,7 +6,12 @@ def scrape_website(website):
     print("Launching chrome browser...")
 
     options = webdriver.ChromeOptions()
+    options.add_argument("--headless=new")
+    options.add_argument("--disable-gpu")
+    options.add_argument("--no-sandbox")
+
     driver = webdriver.Chrome(options=options)
+
 
     try:
         driver.get(website)
@@ -39,7 +44,7 @@ def clean_body_content(body_content):
     return cleaned
 
 
-def split_dom_content(dom_content, max_length=2000):
+def split_dom_content(dom_content, max_length=1000):
     return [
         dom_content[i:i + max_length]
         for i in range(0, len(dom_content), max_length)

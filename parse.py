@@ -12,8 +12,7 @@ template = (
 )
 
 
-model = OllamaLLM(model="llama3.1:latest")
-
+model = OllamaLLM(model="tinyllama")
 
 
 def parse_with_ollama(dom_chunks, parse_description):
