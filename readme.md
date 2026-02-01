@@ -42,39 +42,39 @@ ai-web-scraper/
 
 ## ⚙️ Installation
 
-Clone repo
+### Clone repo
 
 ```
 git clone https://github.com/yourusername/ai-web-scraper.git
 cd ai-web-scraper
 ```
 
-Create virtual environment
+#### Create virtual environment
 
 ```
 python -m venv venv
 source venv/bin/activate
 ```
 
-Install dependencies
+### Install dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-Enable AI Parsing
+### Enable AI Parsing
 ```
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-Pull lightweight model
+### Pull lightweight model
 
 ```
 ollama pull tinyllama
 ```
 
 
-Run the App
+### Run the App
 
 ```
 streamlit run main.py
